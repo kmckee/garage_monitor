@@ -1,5 +1,8 @@
-require 'sinatra'
+require 'sinatra/base'
 
-get '/:passcode' do
-  "O Hai! #{params['passcode']}"
+class App < Sinatra::Base
+  get '/' do
+      "Hello World"
+  end
+  run! if app_file == $0
 end
