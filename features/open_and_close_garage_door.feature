@@ -5,10 +5,7 @@ Feature: Opening and closing the garage door
   Scenario: Opening or closing the main garage door
     When I request the main door open or close
     Then I should see a message indicating that the main door was opened or closed
-    And the main door should open or close
 
-  @ignore
   Scenario: Opening or closing the secondary garage door
     When I request the secondary door open or close 
     Then I should see a message indicating that the secondary door was opened or closed
-    And the secondary door should open or close

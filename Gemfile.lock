@@ -30,6 +30,8 @@ GEM
       watir-webdriver (>= 0.6.2)
     page_navigation (0.9)
       data_magic (>= 0.14)
+    pi_piper (1.3.2)
+      ffi
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
@@ -70,6 +72,7 @@ PLATFORMS
 DEPENDENCIES
   cucumber
   page-object
+  pi_piper
   require_all
   rspec
   shotgun

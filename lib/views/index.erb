@@ -1,0 +1,15 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="message">
+      <%= @message %>
+    </div>
+    <form action='/open_main_door' method='post'>
+      <input type='submit' id='openMainDoor' value="Open Main Door"/>
+    </form>
+    <form action='/open_secondary_door' method='post'>
+      <input type='submit' id='openSecondaryDoor' value="Open Secondary Door"/>
+    </form>
+  </body>
+</html>
