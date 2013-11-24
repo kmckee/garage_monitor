@@ -5,7 +5,7 @@ set :environment, :development
 set :port, 9393
 
 class Fake
-  def method_missing
+  def method_missing args
   end
 end
 
@@ -20,16 +20,18 @@ else
   time_to_hold_button = 0.5
 end
 
-@door_opener = DoorOpener.new(main_door, secondary_door, time_to_hold_button)
+@@door_opener = DoorOpener.new(main_door, secondary_door, time_to_hold_button)
 
 get '/' do
   erb :index
 end
 post '/open_main_door' do
   @message = "Main door opened or closed."
+  @@door_opener.open_main_door
   erb :index
 end
 post '/open_secondary_door' do
   @message = "Secondary door opened or closed."
+  @@door_opener.open_main_door
   erb :index
 end
